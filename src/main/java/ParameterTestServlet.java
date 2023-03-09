@@ -16,4 +16,5 @@ public class ParameterTestServlet extends HttpServlet {
         String word = request.getParameter("word");
         out.println("<h1>You entered " + word + "!</h1>");
     }
+
 }
