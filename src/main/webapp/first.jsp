@@ -5,6 +5,8 @@
   Time: 1:42 PM
   To change this template use File | Settings | File Templates.
 --%>
+
+<%--As long as we have this link, we can add HTML css and JS to this file--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
