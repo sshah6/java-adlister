@@ -10,14 +10,17 @@
 <%
     String username = request.getParameter("uname");
     String password = request.getParameter("psw");
-if(username != null && password != null){
-    if(username.equals("admin") && password.equals("password")){
-        response.sendRedirect("/profile.jsp?uname=" + username + "&psw=" + password);
-    }else{
-        PrintWriter print = response.getWriter();
-        print.println("<h1 style =color:red>Invalid Username and password. </h1>");
+
+//    OR instead of null check we check for type of method
+//    As if(method.equals("POST){then do the bottom code}.
+    if(username != null && password != null){
+        if(username.equals("admin") && password.equals("password")){
+            response.sendRedirect("/profile.jsp?uname=" + username + "&psw=" + password);
+        }else{
+            PrintWriter print = response.getWriter();
+            print.println("<h1 style =color:red>Invalid Username and password. </h1>");
+        }
     }
-}
 
 %>
 
@@ -27,11 +30,11 @@ if(username != null && password != null){
 </head>
 <body>
     <h1>Login in to your profile</h1>
+<%--    If the action is left off completely, the default is submitting back to the page itself--%>
     <form action="/login.jsp" method="POST">
         <div class="container">
             <label><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
-
             <label><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
             <button type="submit">Login</button>
