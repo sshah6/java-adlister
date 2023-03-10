@@ -19,6 +19,9 @@
     <title>names</title>
 </head>
 <body>
+
+<%@ include file="partials/navbar.jsp" %>
+
 <c:forEach var="name" items="${names}">
   <li>${name}</li>
 </c:forEach>

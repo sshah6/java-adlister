@@ -13,6 +13,9 @@
 
 </head>
 <body>
+
+<%@ include file="partials/navbar.jsp" %>
+
   <h1> order food</h1>
   <form action="/foods.jsp">
     <select name="food" id="foods">
