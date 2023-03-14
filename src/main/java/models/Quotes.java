@@ -5,14 +5,22 @@ import java.io.Serializable;
 public class Quotes implements Serializable {
     private int id;
     private String content;
-    private String author;
+    private Authors author;
 
-    public Quotes(String content, String author) {
+    public Quotes(String content, Authors author) {
         this.content = content;
         this.author = author;
     }
-    public Quotes(){
 
+    public Quotes() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getContent() {
@@ -23,11 +31,14 @@ public class Quotes implements Serializable {
         this.content = content;
     }
 
-    public String getAuthor() {
+    public Authors getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Authors author) {
         this.author = author;
     }
 }
+
+
+
