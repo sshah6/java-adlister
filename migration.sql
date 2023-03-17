@@ -11,6 +11,11 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 
+# INSERT INTO users(username, email, password)
+# VALUES ("Alex", "email@email.com", "pass");
+
+SELECT * FROM users;
+
 CREATE TABLE ads (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
@@ -20,3 +25,5 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+SELECT * FROM ads;
